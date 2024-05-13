@@ -1,0 +1,40 @@
+<div class="auth-wrapper">
+    <div class="auth-content">
+        <div class="card">
+            <div class="row align-items-center text-center">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <img src="images/logo-dark.svg" alt class="img-fluid mb-4">
+                        <h4 class="mb-3 f-w-400">Ajouter Gerant!</h4>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i data-feather="user"></i></span>
+                            <input type="text" class="form-control" placeholder="firstname" [(ngModel)]="firstname">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i data-feather="user"></i></span>
+                            <input type="text" class="form-control" placeholder="lastname" [(ngModel)]="lastname">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i data-feather="user"></i></span>
+                            <input type="text" class="form-control" placeholder="telephone" [(ngModel)]="telephone">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i data-feather="mail"></i></span>
+                            <input type="email" class="form-control" placeholder="Email address" [(ngModel)]="email">
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text"><i data-feather="lock"></i></span>
+                            <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
+                        </div>
+                        <div class="form-group text-left mt-2">
+                            <div class="form-check">
+                                <!-- Your form check code here -->
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-block mb-4" (click)="addGerant()">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

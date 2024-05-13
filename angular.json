@@ -29,6 +29,7 @@
             ],
             "scripts": []
           },
+          
           "configurations": {
             "production": {
               "budgets": [
@@ -84,12 +85,26 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/feather.css",
+              "assets/css/fontawesome.css",
+              "assets/css/material.css",
+              "assets/css/style.css"
             ],
-            "scripts": []
+            "scripts": ["src/assets/js/vendor-all.min.js",
+            "src/assets/js/bootstrap.min.js",
+            "src/assets/js/feather.min.js",
+            "src/assets/js/pcoded.min.js",
+            "src/assets/js/apexcharts.min.js",
+            "src/assets/js/custom.js",
+            "src/assets/js/dashboard-sale.js"
+          ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "22b0e61d-0a2c-4d58-bf20-47505724ddfb"
   }
 }

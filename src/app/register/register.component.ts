@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { GerantService } from '../services/gerant-service.service';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-register',
@@ -15,7 +16,7 @@ export class RegisterComponent {
   telephone: string = '';
   email: string = '';
   password: string = '';
-  constructor(private gerantService: GerantService) { }
+  constructor(private gerantService: GerantService,private router: Router) { }
   addGerant(): void {
     const gerantData = {
       firstname: this.firstname,
@@ -35,6 +36,8 @@ export class RegisterComponent {
           icon: 'success',
           confirmButtonText: 'OK'
         });
+
+        this.router.navigate(['/listgerant']);
         // Optionally, you can perform additional actions after adding the gerant, such as showing a success message or navigating to another page.
       },
       (error) => {

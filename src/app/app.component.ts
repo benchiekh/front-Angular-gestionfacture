@@ -13,30 +13,24 @@ import { jwtDecode } from "jwt-decode";
     imports: [CommonModule, RouterOutlet, RouterLink, HeaderComponent,HttpClientModule,HeaderGerantComponent]
 })
 export class AppComponent {
+  ShowHeader = true;
+  role=""
+  username=""
   ngOnInit(): void {
     //get role from localstorge
     const token = localStorage.getItem('token');
     const dtoken = this.decodeToken(token!)
     this.role = dtoken.role
+
     console.log(this.role)
     console.log(dtoken);
+
+    this.username=dtoken.firstname+" "+dtoken.firstname
+    console.log(this.role)
  
   }
-  ShowHeader = true;
-  role="Gerant"
 
-  constructor(private router: Router) {
-    // Assuming you have imported Router from '@angular/router'
-    this.router.events.subscribe((event: any) => {
-      if (event instanceof NavigationEnd) {
-        if (event.url === '/login' || event.url === '/') {
-          this.ShowHeader = false;
-        } else {
-          this.ShowHeader = true;
-        }
-      }
-    });
-  }
+
   decodeToken(token: string): any {
     try {
       return jwtDecode(token);
@@ -45,5 +39,19 @@ export class AppComponent {
       return null;
     }
   }
+  constructor(private router: Router) {
+    // Assuming you have imported Router from '@angular/router'
+    this.router.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        if (event.url === '/login' || event.url === '/') {
+          this.ShowHeader = false;
+          
+        } else {
+          this.ShowHeader = true;
+        }
+      }
+    });
+  }
+ 
   
 }

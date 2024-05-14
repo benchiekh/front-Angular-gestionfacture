@@ -25,7 +25,11 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
               "@angular/material/prebuilt-themes/indigo-pink.css",
+=======
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
+>>>>>>> a78bbd6649987fc7e1f7f4a60dae1b9dbdaf193a
               "src/styles.css"
             ],
             "scripts": []
@@ -86,7 +90,11 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
               "@angular/material/prebuilt-themes/indigo-pink.css",
+=======
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
+>>>>>>> a78bbd6649987fc7e1f7f4a60dae1b9dbdaf193a
               "src/styles.css",
               "src/assets/css/feather.css",
               "assets/css/fontawesome.css",

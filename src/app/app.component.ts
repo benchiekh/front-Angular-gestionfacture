@@ -4,7 +4,7 @@ import { RouterOutlet, RouterLink, Router, NavigationEnd } from '@angular/router
 import { HeaderComponent } from "./header/header.component";
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderGerantComponent } from './header-gerant/header-gerant.component';
-
+import { jwtDecode } from "jwt-decode";
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -15,6 +15,12 @@ import { HeaderGerantComponent } from './header-gerant/header-gerant.component';
 export class AppComponent {
   ngOnInit(): void {
     //get role from localstorge
+    const token = localStorage.getItem('token');
+    const dtoken = this.decodeToken(token!)
+    this.role = dtoken.role
+    console.log(this.role)
+    console.log(dtoken);
+ 
   }
   ShowHeader = true;
   role="Gerant"
@@ -31,5 +37,13 @@ export class AppComponent {
       }
     });
   }
-
+  decodeToken(token: string): any {
+    try {
+      return jwtDecode(token);
+    } catch (error) {
+      console.error('Error decoding token:', error);
+      return null;
+    }
+  }
+  
 }

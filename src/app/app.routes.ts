@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ListGerantComponent } from './list-gerant/list-gerant.component';
+import { ArticleComponent } from './article/article.component';
 
 export const routes: Routes = [
    {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -15,4 +16,5 @@ export const routes: Routes = [
    { path:'login', title:"login page",component:LoginComponent,},
    { path:'register', title:"register page",component:RegisterComponent,},
    { path:'listgerant', title:"listuser page",component:ListGerantComponent,},
+   { path:'article', title:"article page",component:ArticleComponent,},
 ];
